@@ -9,4 +9,13 @@ let programmer = {
 		}
 	};
 
-programmer.writeCode();
+
+let groceryListItem = {
+		name: "Apples",
+		quantity: 4,
+		display: function() {
+			console.log(`${this.quantity} x ${this.name}`);
+		}
+	};
+
+groceryListItem.display();
