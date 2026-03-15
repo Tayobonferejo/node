@@ -72,6 +72,12 @@ function GroceryItem (name, quantity) {
 
 const newGroceryItem = new GroceryItem("John", 4);
 
-newGroceryItem.display();
+function calculatePrice( groceryItem, price) {
+        return (
+            groceryItem.quantity * price
+        );
+    }
 
-console.log(newGroceryItem.constructor);
+    const performCalculation = calculatePrice;
+
+    console.log(performCalculation(newGroceryItem, 23));
