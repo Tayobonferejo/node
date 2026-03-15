@@ -73,3 +73,5 @@ function GroceryItem (name, quantity) {
 const newGroceryItem = new GroceryItem("John", 4);
 
 newGroceryItem.display();
+
+console.log(newGroceryItem.constructor);
