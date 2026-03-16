@@ -26,3 +26,40 @@ const ProgrammerFunct = new Function("name", `
     const performCalculation = calculatePrice;
 
     performCalculation("Rice", 23);
+
+    let a = 50;
+    let b = a;
+
+    a = 20;
+    b = a;
+    console.log(a);
+    console.log(b);
+
+    a = { value: 20};
+    b = a;
+
+
+    a.value = 70;
+
+
+    const person = {
+        name: "steven"
+    };
+
+    console.log(person);
+
+    person.favouriteFood = "tacos";
+    console.log(person); 
+
+    person["favouriteIceCream"] = "chocolate";
+
+    console.log(person);
+
+    delete person.favouriteIceCream;
+    console.log(person);
+
+    person.eat = function() {
+        console.log(`${this.name} eats ${this.favouriteFood}`);
+    }
+    
+    person.eat();

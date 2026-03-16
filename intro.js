@@ -81,3 +81,7 @@ function calculatePrice( groceryItem, price) {
     const performCalculation = calculatePrice;
 
     console.log(performCalculation(newGroceryItem, 23));
+
+	newGroceryItem.grocerySle = "produce";
+
+console.log(newGroceryItem);
