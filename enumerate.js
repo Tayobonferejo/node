@@ -23,3 +23,9 @@ for (const value of values)
     {
       console.log(value);
     }
+
+const entries = Object.entries(dog);
+
+for (const entry of entries) {
+    console.log(`key: ${entry[0]} => Value: ${entry[1]}`);
+}

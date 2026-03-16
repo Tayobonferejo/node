@@ -84,4 +84,28 @@ function calculatePrice( groceryItem, price) {
 
 	newGroceryItem.grocerySle = "produce";
 
-console.log(newGroceryItem);
+// console.log(newGroceryItem);
+
+
+
+// for (const key in newGroceryItem){
+// 	console.log(key);
+// }
+
+const values = Object.values(newGroceryItem);
+
+for ( const value of values) {
+	console.log(value);
+}
+
+const keys = Object.values(newGroceryItem); 
+
+for (const value of keys) {
+	console.log(keys);
+}
+
+const entries = Object.entries(newGroceryItem);
+
+for( const entry of entries) {
+	console.log(`key: ${entry[0]} => Value: ${entry[0]}`);
+}
