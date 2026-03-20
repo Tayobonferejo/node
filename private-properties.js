@@ -30,6 +30,34 @@ function makeFunction() {
 
 const { logNum, increment } = makeFunction();
 
-logNum();
-increment();
-logNum();
+
+function Programmer (name, preferredLanguage) {
+    
+    // Private property 
+    let privateName = name;
+
+    // public property
+    this.preferredLanguage = preferredLanguage;
+
+    // Public method
+    this.writeCode = function () {
+        console.log (`Code in ${this.preferredLanguage}`);
+
+    }
+
+    // Private method
+    let drinkCoffee = function() {
+        console.log("Gulp...");
+    }
+
+    // public method that uses a closure
+
+    this.startDay = function() {
+        drinkCoffee();
+    }
+}
+
+const programmer = new Programmer("James", "JavaScript");
+
+programmer.writeCode();
+programmer.startDay()
