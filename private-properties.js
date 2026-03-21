@@ -41,7 +41,7 @@ function Programmer (name, preferredLanguage) {
 
     // Public method
     this.writeCode = function () {
-        console.log (`Code in ${this.preferredLanguage}`);
+        console.log (` ${privateName} Codes in ${this.preferredLanguage}`);
 
     }
 
@@ -60,4 +60,47 @@ function Programmer (name, preferredLanguage) {
 const programmer = new Programmer("James", "JavaScript");
 
 programmer.writeCode();
-programmer.startDay()
+programmer.startDay();
+
+function BankAccount (initialBalance) {
+    let accountBalance = 0;
+    
+    const validate = (amount) => {
+        return typeof amount === "number" && amount > 0;
+    }
+
+
+    this.deposit = function () {
+
+        if(validate(amount)) {
+            accountBalance = accountBalance + amount;
+            console.log(` The amount "${amount}" was deposited into your account. `)
+        }
+        else {
+            console.log("Invalid deposit amount")
+        }
+
+    }
+
+    this.withdraw = function () {
+
+        if (validate(amount)) {
+            if(amount <= accountBalance) {
+                accountBalance = accountBalance - amount;
+                console.log(` The amount "${Amount}" was withdrawn into your account.`);
+            }
+            else {
+                console.log("Insufficient funds");
+            }
+        }
+
+        else {
+            c
+        }
+
+    }
+
+    this.getBalance = function () {
+        console.log(${accountBalance})
+    }
+}
