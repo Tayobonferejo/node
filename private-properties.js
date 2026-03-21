@@ -66,15 +66,15 @@ function BankAccount (initialBalance) {
     let accountBalance = 0;
     
     const validate = (amount) => {
-        return typeof amount === "number" && amount > 0;
+        return typeof(amount) === "number" && amount > 0;
     }
 
 
-    this.deposit = function () {
+    this.deposit = function (amount) {
 
         if(validate(amount)) {
             accountBalance = accountBalance + amount;
-            console.log(` The amount "${amount}" was deposited into your account. `)
+            console.log(` The amount "$${amount}" was deposited into your account. `)
         }
         else {
             console.log("Invalid deposit amount")
@@ -82,12 +82,12 @@ function BankAccount (initialBalance) {
 
     }
 
-    this.withdraw = function () {
+    this.withdraw = function (amount) {
 
         if (validate(amount)) {
             if(amount <= accountBalance) {
                 accountBalance = accountBalance - amount;
-                console.log(` The amount "${Amount}" was withdrawn into your account.`);
+                console.log(` The amount "$${amount}" was withdrawn into your account.`);
             }
             else {
                 console.log("Insufficient funds");
@@ -95,12 +95,18 @@ function BankAccount (initialBalance) {
         }
 
         else {
-            c
+            console.log("Invalid withdraw amount");
         }
 
     }
 
     this.getBalance = function () {
-        console.log(${accountBalance})
+        console.log(`Your Total balance $${accountBalance}`);
     }
 }
+
+const bankAccount = new BankAccount(900);
+
+bankAccount.deposit("400");
+bankAccount.withdraw(800);
+bankAccount.getBalance();
