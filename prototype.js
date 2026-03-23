@@ -52,4 +52,41 @@ let superAdmin = {
 //     console.log(key);
 // }
 
-console.log(Object.keys(admin));
+// console.log(Object.keys(admin));
+
+const programmerPrototype = {
+    writeCode: function() {
+        console.log(`Writing code in ${this.preferredLanguage}`);
+    },
+    drinkCoffee: function() {
+        console.log("Drinking coffee");
+    }
+};
+
+function Programmer(name, preferredLanguage) {
+    let privateName = name; 
+    this.preferredLanguage = preferredLanguage
+
+    Object.defineProperties(this, {
+        "name" : {
+            get: function() {
+                return privateName;
+            },
+            set: function(newName) {
+                privateName = newName
+            }
+        }
+    });
+
+    Object.setPrototypeOf(this, programmerPrototype);
+
+
+}
+
+const jsProgrammer = new Programmer("Alice", "JavaScript");
+
+jsProgrammer.writeCode();
+jsProgrammer.drinkCoffee();
+console.log(jsProgrammer.name);
+jsProgrammer.name = "Johnny";
+console.log(jsProgrammer.name);
