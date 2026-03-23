@@ -5,7 +5,7 @@ let user = {
     isOnline: true,
 
     set fullName(value) {
-        [this.name, this.surname] = value.split("");
+        [this.name, this.surname] = value.split(" ");
     },
 
     get fullName() {
@@ -43,3 +43,13 @@ let superAdmin = {
         console.log(`${this.fullName} is managing admins.`);
     }
 }
+
+// admin.fullName = "Bruce Wayne";
+// console.log(admin.fullName);
+// console.log(user.fullName);
+
+// for (let key in admin) {
+//     console.log(key);
+// }
+
+console.log(Object.keys(admin));
