@@ -3,6 +3,25 @@ function Programmer(name, preferredLanguage) {
 
     let privateName = name;
 
+    Object.defineProperties(this, {
+        "name" : {
+            get: function() {
+                return privateName;
+            },
+            set: function(newName) {
+            if(!newName) {
+                console.log(`Name cannot be empty`);
+                return;
+            }
+            else {
+                privateName = newName;
+            }
+         }
+
+        }
+
+    })
+
     // public property
     this.preferredLanguage = preferredLanguage;
 
@@ -30,3 +49,8 @@ const programmer = new Programmer("Butley" , "Python");
 
 programmer.writeCode();
 programmer.startDay();
+
+console.log(programmer.name);
+
+programmer.name = '';
+console.log(programmer.name);
