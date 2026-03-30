@@ -55,3 +55,22 @@ for (let key in Programmer) {
 }
 
 console.log(jsProgrammer.hasOwnProperty("name"));
+
+// Array.prototype.shuffle = function() {
+//     // implementation of a shuffle method
+//     console.log("shuffle");
+// }
+
+
+function shuffleArray(array) {
+    // shuffle logic here
+
+    return array;
+}
+const array = [];
+// array.shuffle();
+
+const shuffledArray = shuffleArray(array);
+
+
+if(typeof Array.prototype)
