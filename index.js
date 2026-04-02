@@ -31,3 +31,31 @@ John.code();
 steven.code();
 
 console.log(John.code === steven.code);
+
+function FrontEndProgrammer(name) {
+    Programmer.call(this,name);
+}
+
+function BackendProgrammer(name) {
+    Programmer.call(this, name);
+}
+
+FrontEndProgrammer.prototype = Object.create(Programmer.prototype);
+
+BackendProgrammer.prototype = Object.create(Programmer.prototype);
+
+FrontEndProgrammer.prototype.constructor = FrontEndProgrammer;
+
+BackendProgrammer.prototype.constructor = BackendProgrammer;
+
+const joe = new FrontEndProgrammer("Joe");
+
+joe.code();
+joe.debug();
+joe.meeting();
+
+const jen = new BackendProgrammer("Jen");
+
+jen.code();
+jen.debug();
+jen.meeting();  
