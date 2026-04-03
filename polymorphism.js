@@ -41,3 +41,34 @@ const programmers = [
 for (let programmer of programmers) {
     programmer.work();
 }
+
+function Employee (rname) {
+    this.name = rname
+}
+
+function ProgrammerEmploy (rname) {
+    Employee.call(this, rname);
+    Object.assign(this, canCode, canReview);
+}
+
+const canCode = {
+    code() {
+        console.log(`${this.name} is coding`);
+    }
+};
+
+const canReview = {
+    review() {
+        console.log(`${this.name} reviewing is coding`);
+    }
+};
+
+function Manager(rname) {
+    Employee.call(this. rname);
+}
+
+const steve = new ProgrammerEmploy("Rondy");
+steve.code();
+steve.review();
+
+
