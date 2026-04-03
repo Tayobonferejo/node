@@ -26,10 +26,9 @@ Programmer.prototype.code = function() {
 const steven = new FrontEndProgrammer("Steven", "Front-end", "React");
 
 const johnny = new BackendProgrammer("Johnny", "Backend");
-
-console.log(steven.name);
-console.log(steven.specialisation);
-console.log(steven.perferredFramework);
-
+FrontEndProgrammer.prototype.code = function() {
+    Programmer.prototype.code.call(this);
+    console.log(`${this.name} is coding in  HTML/CSS/Javascript`)
+}
 steven.code();
 johnny.code();
