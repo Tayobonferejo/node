@@ -69,6 +69,6 @@ function Manager(rname) {
 
 const steve = new ProgrammerEmploy("Rondy");
 steve.code();
-steve.review();
+steve.review();  
 
 
