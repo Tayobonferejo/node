@@ -9,6 +9,10 @@ class Programmer {
         console.log(`${this.name} is coding in ${this.preferredLanguage}`);
     }
 
+    must() {
+        console.log(this)
+    }
+
     static compareSkill(programmer2, programmer3) {
         return programmer2.preferredLanguage === programmer3;
     }
@@ -16,6 +20,11 @@ class Programmer {
 
 const dev = new Programmer("Mommy", "Node")
 const dev2 = new Programmer("steven" , "springboot");
+
+dev.must();
+const detch = dev.must.bind(dev);
+
+detch();
 
 console.log(Programmer.compareSkill(dev, dev2))
 
