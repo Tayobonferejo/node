@@ -59,6 +59,7 @@ function Programmer(name, preferredLanguage) {
 	};
 
 }
+module.exports = Programmer;
 
 const newProgram = new Programmer("Alice", "Javascript");
 
