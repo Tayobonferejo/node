@@ -4,7 +4,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "babel" : "babel index.js -o build/index.js"
+    "babel": "babel index.js -o build/index.js",
+    "build": "webpack"
   },
   "keywords": [],
   "author": "",
@@ -13,6 +14,9 @@
   "devDependencies": {
     "@babel/cli": "^7.28.6",
     "@babel/core": "^7.29.0",
-    "@babel/preset-env": "^7.29.2"
+    "@babel/preset-env": "^7.29.2",
+    "babel-loader": "^10.1.1",
+    "webpack": "^5.106.2",
+    "webpack-cli": "^7.0.2"
   }
 }
